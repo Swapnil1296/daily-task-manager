@@ -1,4 +1,4 @@
- import {NavBar} from "./components/Navigation/NavBar"
+ import {NavBar} from "./components/layouts/Navigation/NavBar";
 const App = () => {
   return (
     <>
