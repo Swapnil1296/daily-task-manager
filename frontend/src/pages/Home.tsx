@@ -1,4 +1,3 @@
-import React from "react";
 import LoggedOutHome from "../components/layouts/LoggedOut";
 
 const Home = () => {
