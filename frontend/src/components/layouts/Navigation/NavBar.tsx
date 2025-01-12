@@ -1,41 +1,86 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export const NavBar = () => {
+const Navbar = () => {
+  return (
+    <nav className="bg-gradient-to-r from-yellow-500 to-orange-500 shadow-md fixed w-full top-0 z-50">
+      <div className="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <Link to="/" className="text-white text-2xl font-bold">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            MyApp
+          </motion.div>
+        </Link>
 
-    const toggleMenu = () => {
-        const navToggle = document.getElementsByClassName("toggle");
-        for (let i = 0; i < navToggle.length; i++) {
-          navToggle?.item(i).classList.toggle("hidden");
-        }
-      };
-    return (
-        <nav className="flex flex-wrap items-center justify-between p-3 bg-lime-200">
-            <img src="https://tailwindflex.com/public/favicon.ico" className="h-10 w-10" alt="" />
-            <div className="flex md:hidden">
-                <button id="hamburger" onClick={toggleMenu}>
-                    <img className="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="48" height="48" />
-                    <img className="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="48" height="48" />
-                </button>
-            </div>
-            <div
-                className="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 border-t-2 border-teal-900 md:border-none">
-                <a href="#"
-                    className="block md:inline-block text-teal-900 hover:text-teal-500 px-3 py-3 border-b-2 border-teal-900 md:border-none">Home
-                </a>
-                <a href="#"
-                    className="block md:inline-block text-teal-900 hover:text-teal-500 px-3 py-3 border-b-2 border-teal-900 md:border-none">Products
-                </a>
-                <a href="#"
-                    className="block md:inline-block text-teal-900 hover:text-teal-500 px-3 py-3 border-b-2 border-teal-900 md:border-none">Pricing
-                </a>
-                <a href="#"
-                    className="block md:inline-block text-teal-900 hover:text-teal-500 px-3 py-3 border-b-2 border-teal-900 md:border-none">Contact
-                </a>
-            </div>
-            <a href="#"
-                className="toggle hidden md:flex w-full md:w-auto px-4 py-2 text-right bg-teal-900 hover:bg-teal-500 text-white md:rounded">Create
-                Account
-            </a>
-        </nav>
-    )
-}
+        {/* Menu Button (Mobile View) */}
+        <div className="lg:hidden">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </motion.button>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex space-x-6">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-white text-lg"
+          >
+            <Link to="/add-task">Add Task</Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-white text-lg"
+          >
+            <Link to="/ask-ai">Ask AI</Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-white text-lg"
+          >
+            <Link to="/buy-coffee">Buy Me A Coffee</Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-white text-lg"
+          >
+            <Link to="/sign-in">Sign In</Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-white text-lg"
+          >
+            <Link to="/login">Login</Link>
+          </motion.div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
