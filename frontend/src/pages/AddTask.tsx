@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const AddTask = () => {
   return (
     <motion.div
-      className="flex justify-center items-center min-h-screen bg-gradient-to-br from-green-400 to-blue-500"
+      className="flex mt-20 justify-center items-center min-h-screen "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

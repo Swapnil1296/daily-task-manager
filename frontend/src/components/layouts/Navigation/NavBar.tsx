@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import prohub from "../../../assets/images/prohub.webp";
 
 const Navbar = () => {
   return (
@@ -12,7 +13,11 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            MyApp
+            <img
+              src={prohub}
+              alt="pro-hub-svg"
+              className="h-10 w-auto object-contain rounded-lg" // Ensure proper sizing and responsiveness
+            />
           </motion.div>
         </Link>
 
@@ -61,7 +66,7 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             className="text-white text-lg"
           >
-            <Link to="/buy-coffee">Buy Me A Coffee</Link>
+            <Link to="/buy-me-coffee">Buy Me A Coffee</Link>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -75,12 +80,13 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             className="text-white text-lg"
           >
-            <Link to="/login">Login</Link>
+            <Link to="/log-in">Login</Link>
           </motion.div>
         </div>
       </div>
     </nav>
   );
 };
+
 
 export default Navbar;
