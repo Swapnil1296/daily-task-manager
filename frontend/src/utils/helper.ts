@@ -25,6 +25,15 @@ export const validationSchemas = {
     confirmPassword: yup.string()
       .required('Please confirm your password')
       .oneOf([yup.ref('password')], 'Passwords must match')
-  })
+  }),
+
+  validationSchemaAddTask: yup.object().shape({
+    title: yup.string().required('Title is required'),
+    description: yup.string().required('Description is required'),
+    dueDate: yup.string().required('Due date is required'),
+    priority: yup.string().required('Priority is required'),
+    tags: yup.array().of(yup.string()),
+    subtasks: yup.array().of(yup.string()),
+  });
 
 }
