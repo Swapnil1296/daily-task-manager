@@ -11,7 +11,16 @@ interface LoginProps {
   password: string;
 }
 
+type FieldNames = keyof LoginProps;
 
+interface FormField {
+  // Define the form fields
+  id: FieldNames;
+  name: FieldNames;
+  type: string;
+  label: string;
+  placeholder: string;
+}
 
 
 const Login = () => {
@@ -21,7 +30,7 @@ const Login = () => {
     email: "",
     password: "",
   })
-  const formFields = [
+  const formFields: FormField[] = [
     {
       id: "email",
       name: "email",
