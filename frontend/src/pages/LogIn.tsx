@@ -2,6 +2,7 @@ import { Field, Formik, Form, ErrorMessage } from "formik";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { validationSchemas } from "../utils/helper";
+import { Link } from "react-router-dom";
 
 
 interface LoginProps {
@@ -86,9 +87,9 @@ const Login = () => {
         </Formik>
         <p className="text-sm text-center text-gray-600 mt-6">
           Don’t have an account?{" "}
-          <a href="#" className="text-green-500 hover:underline">
+          <Link to='/sign-up' className="text-green-500 hover:underline">
             Sign Up
-          </a>
+          </Link>
         </p>
       </motion.div>
     </div>
