@@ -34,6 +34,16 @@ export const validationSchemas = {
     priority: yup.string().required('Priority is required'),
     tags: yup.array().of(yup.string()),
     subtasks: yup.array().of(yup.string()),
-  });
+  }),
+  validationSchemaTakeNotes : yup.object({
+    title: yup.string()
+      .required('Title is required')
+      .max(100, 'Title must be 100 characters or less'),
+    content: yup.string()
+      .required('Note content is required')
+      .max(1000, 'Note must be 1000 characters or less'),
+    tags: yup.array().of(yup.string()),
+    newTag: yup.string().max(20, 'Tag must be 20 characters or less')
+  }),
 
 }
