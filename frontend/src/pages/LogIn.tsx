@@ -1,7 +1,7 @@
 import { Field, Formik, Form, ErrorMessage } from "formik";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import * as yup from "yup";
+import { validationSchemas } from "../utils/helper";
 
 
 interface LoginProps {
@@ -10,17 +10,33 @@ interface LoginProps {
   password: string;
 }
 
-const validationSchema = yup.object().shape({
-  email: yup.string().email().required("Email is required"),
-  password: yup.string().required("Password is required"),
-});
+
 
 
 const Login = () => {
+
+
   const [initialState] = useState<LoginProps>({
     email: "",
     password: "",
   })
+  const formFields = [
+    {
+      id: "email",
+      name: "email",
+      type: "email",
+      label: "Email",
+      placeholder: "Enter your email"
+    },
+    {
+      id: "password",
+      name: "password",
+      type: "password",
+      label: "Password",
+      placeholder: "Enter your password"
+    }
+  ];
+
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-300 via-blue-300 to-indigo-300">
@@ -33,7 +49,7 @@ const Login = () => {
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Log In</h2>
         <Formik
           initialValues={initialState}
-          validationSchema={validationSchema}
+          validationSchema={validationSchemas?.validationSchemaLoginForm}
           enableReinitialize
           onSubmit={(values) => {
             console.log(values);
@@ -41,31 +57,23 @@ const Login = () => {
           }>
           {({ isSubmitting, isValid, dirty }) => (
             <Form className="space-y-6">
-              {/* Email */}
-              <div>
-                <label className="block text-sm font-medium text-gray-600">Email</label>
+              {formFields.map((field) =>
+              (
+                <div key={field.id}>
+                  <label className="block text-sm font-medium text-gray-600">{field?.label}</label>
                 <Field
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email"
+                    id={field?.id}
+                    name={field?.name}
+                    type={field?.type}
+                    placeholder={field?.placeholder}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-200 focus:border-green-400"
                 />
-                <ErrorMessage name="email" component="div" className="text-red-500" />
+                  <ErrorMessage name={field?.name} component="div" className="text-red-500" />
               </div>
+              ))}
 
-              {/* Password */}
-              <div>
-                <label className="block text-sm font-medium text-gray-600">Password</label>
-                <Field
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="Enter your password"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-200 focus:border-green-400"
-                />
-                <ErrorMessage name="password" component="div" className="text-red-500" />
-              </div>
+
+
 
               {/* Login Button */}
               <button type="submit" disabled={!(isValid && dirty) || isSubmitting}
@@ -73,7 +81,8 @@ const Login = () => {
                   ${!(isValid && dirty) || isSubmitting ? 'w-full py-3 text-white rounded-md shadow-md bg-gray-400 cursor-not-allowed' : "w-full py-3 text-white bg-green-500 rounded-md hover:bg-green-600 shadow-md"}`}>
                 Log In
               </button>
-            </Form>)}
+            </Form>
+          )}
         </Formik>
         <p className="text-sm text-center text-gray-600 mt-6">
           Don’t have an account?{" "}
