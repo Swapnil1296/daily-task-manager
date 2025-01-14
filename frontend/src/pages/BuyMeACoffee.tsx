@@ -4,7 +4,7 @@ const BuyMeACoffee = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-yellow-200 via-orange-300 to-red-300">
       <motion.div
-        className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg"
+        className="w-full mt-20 max-w-md p-6 bg-white rounded-lg shadow-lg"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}

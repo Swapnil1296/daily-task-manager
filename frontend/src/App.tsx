@@ -6,22 +6,25 @@ import AskAITab from "./pages/AskToAi";
 import SignIn from "./pages/SignIn";
 import Login from "./pages/LogIn";
 import BuyMeACoffee from "./pages/BuyMeACoffee";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
   return (
    
      <Router basename="/">
       {/* Your app components go here */}
       <Navbar />
-   
-      <Home />
-      {/* <AddTask /> */}
-      {/* <TakeNotes /> */}
-      {/* <AskAITab /> */}
-      {/* <SignIn />
-      <Login /> */}
-        {/* <BuyMeACoffee /> */}
-        </Router> 
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add-task" element={<AddTask />} />
+        <Route path="/take-notes" element={<TakeNotes />} />
+        <Route path="/ask-ai" element={<AskAITab />} />
+        <Route path="/sign-up" element={<SignIn />} />
+        <Route path="/log-in" element={<Login />} />
+        <Route path="/buy-me-coffee" element={<BuyMeACoffee />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+   </Router> 
        
    
   )
