@@ -5,9 +5,9 @@ const options = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'User Authentication API',
+            title: 'Daily Task Tracker API List',
             version: '1.0.0',
-            description: 'API documentation for user authentication system'
+            description: 'API documentation for daily task tracker'
         },
         servers: [
             {
@@ -22,7 +22,7 @@ const options = {
         ],
         components: {
             schemas: {
-                User: {
+                signup: {
                     type: 'object',
                     required: ['email', 'name', 'password'],
                     properties: {
@@ -35,6 +35,23 @@ const options = {
                             type: 'string',
                             description: 'User full name'
                         },
+                        password: {
+                            type: 'string',
+                            format: 'password',
+                            description: 'User password'
+                        }
+                    }
+                },
+                signin: {
+                    type: 'object',
+                    required: ['email', 'password'],
+                    properties: {
+                        email: {
+                            type: 'string',
+                            format: 'email',
+                            description: 'User email address'
+                        },
+
                         password: {
                             type: 'string',
                             format: 'password',
@@ -60,7 +77,7 @@ const options = {
             }
         }
     },
-    apis: ['./src/routes/*.js']
+    apis: ['./src/docs/*.js']
 };
 
 const specs = swaggerJsdoc(options);

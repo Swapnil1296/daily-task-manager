@@ -6,28 +6,10 @@ const { authLimiter } = require('../middleware/rate-limiter');
 const { inputSanitizer } = require('../middleware/sanitizer');
 const { signupValidationRules, validate, signInValidationRule } = require('../middleware/validator');
 
-/**
- * @swagger
- * /api/auth/signup:
- *   post:
- *     summary: Register a new user
- *     tags: [Auth]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/User'
- *     responses:
- *       201:
- *         description: User registered successfully
- *       400:
- *         description: Validation error
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Error'
- */
+
+// Swagger documentation
+require('../docs/swagger-doc')
+
 
 
 
