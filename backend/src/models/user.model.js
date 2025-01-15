@@ -1,5 +1,6 @@
 const db = require('../config/database');
 const { logger } = require('../config/logger');
+const generateRefreshToken = require('../utils/gnerate-refresh-tokens');
 
 
 
@@ -48,33 +49,61 @@ module.exports = {
             throw error; // Throw the original error for better debugging
         }
     },
+    singInUser: async (userInfo) => {
+        try {
+            const { email, password, userId } = userInfo
+
+            if (!email) throw new Error("email is requred");
+            if (!password) throw new Error("password is required");
+
+            // const query = 'UPDATE users SET auth=$1 where email=$2 RETURNING id'
+            const refreshToken = generateRefreshToken();
+            const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 7 days
+
+            await db.query(
+                'INSERT INTO refresh_tokens (token, user_id, expires_at) VALUES ($1, $2, $3)',
+                [refreshToken, userId, expiresAt]
+            );
+            return {
+                status: 200,
+                message: "Sign-in successful",
+                data: { refreshToken },
+            };
+        } catch (error) {
+            logger.error(error)
+            throw new Error(`error while sign in ${error?.message}`)
+        }
+    },
     findByEmail: async (email) => {
         if (!email) {
-            throw new Error('Email is required');
+            throw new Error("Email is required");
         }
 
         try {
-            const query = 'SELECT * FROM users WHERE users.email = $1 LIMIT 1';
+            const query = "SELECT * FROM users WHERE users.email = $1 LIMIT 1";
             const result = await db.query(query, [email]);
 
-
-
             if (result.rowCount > 0) {
-                logger.info("user already exist with provided email id")
+                logger.info("User exists with the provided email ID");
                 return {
-                    status: 400,
-                    message: "User already exists",
-                    user: result.rows[0]
+                    status: 200,
+                    message: "User exists",
+                    user: result.rows[0],
                 };
             }
 
-            return null;
+            logger.info("No user found with the provided email ID");
+            return {
+                status: 404,
+                message: "User does not exist",
+                user: null,
+            };
         } catch (error) {
             // Log the error for debugging
-            logger.info(error)
-            console.error('Database error:', error);
-            throw new Error('Failed to check user existence');
+            logger.error("Database error:", error);
+            throw new Error("Failed to check user existence");
         }
-    }
+    },
+
 
 }

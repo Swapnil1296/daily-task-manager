@@ -42,6 +42,17 @@ app.use((err, req, res, next) => {
     logger.error(`Error: ${err.message}`);
     res.status(err.status || 500).json({ error: err.message || "Server Error" });
 });
+// Custom middleware to log rate limit message
+app.use((req, res, next) => {
+    // Listen for rate-limited requests and log to console
+    res.on('finish', () => {
+        if (res.statusCode === 429) {
+            console.log('Rate limit exceeded: Too many requests');
+            console.log('Message:', res.statusMessage);
+        }
+    });
+    next();
+});
 
 // Unhandled Promise Rejection Handling
 process.on("unhandledRejection", (reason, promise) => {

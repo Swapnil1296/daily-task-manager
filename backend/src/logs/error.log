@@ -9,3 +9,11 @@
 2025-01-14 17:11:39 [31merror[39m: [31mRegistration error: user not created[39m
 2025-01-14 17:13:39 [31merror[39m: [31mRegistration error: user not created[39m
 2025-01-14 18:05:33 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-15 12:32:17 [31merror[39m: [31mLogin error : data and hash arguments required[39m
+2025-01-15 12:33:29 [31merror[39m: [31mLogin error : data and hash arguments required[39m
+2025-01-15 13:06:27 [31merror[39m: [31mgenerateRefreshToken is not a function[39m
+2025-01-15 13:06:27 [31merror[39m: [31mLogin error : error while sign in [31mgenerateRefreshToken is not a function[31m[39m
+2025-01-15 13:06:51 [31merror[39m: [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[39m
+2025-01-15 13:06:51 [31merror[39m: [31mLogin error : error while sign in [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[31m[39m
+2025-01-15 13:07:40 [31merror[39m: [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[39m
+2025-01-15 13:07:40 [31merror[39m: [31mLogin error : error while sign in [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[31m[39m

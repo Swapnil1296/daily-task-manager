@@ -24,6 +24,21 @@ const signupValidationRules = [
             return true;
         })
 ];
+const signInValidationRule = [
+    body('email')
+        .trim()
+        .isEmail()
+        .normalizeEmail()
+        .withMessage('Invalid email address'),
+    body('password')
+        .custom((value) => {
+            const result = validatePassword(value);
+            if (!result.isValid) {
+                throw new Error(result.errors[0]);
+            }
+            return true;
+        })
+]
 
 const validate = (req, res, next) => {
     const errors = validationResult(req);
@@ -38,5 +53,6 @@ const validate = (req, res, next) => {
 
 module.exports = {
     signupValidationRules,
-    validate
+    validate,
+    signInValidationRule
 };

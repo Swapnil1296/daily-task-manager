@@ -186,3 +186,270 @@
 2025-01-14 18:44:48 [32minfo[39m: [32mUser registered successfully: john.doe1@example.com[39m
 2025-01-14 18:44:48 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 189.750 ms[39m
 2025-01-14 18:45:22 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-14 18:45:26 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-14 18:58:14 [35mhttp[39m: [35mGET /api-docs/ 304 - - 6.288 ms[39m
+2025-01-14 18:58:14 [35mhttp[39m: [35mGET /api-docs/swagger-ui.css 304 - - 3.224 ms[39m
+2025-01-14 18:58:14 [35mhttp[39m: [35mGET /api-docs/swagger-ui-bundle.js 304 - - 2.637 ms[39m
+2025-01-14 18:58:14 [35mhttp[39m: [35mGET /api-docs/swagger-ui-init.js 304 - - 0.430 ms[39m
+2025-01-14 18:58:14 [35mhttp[39m: [35mGET /api-docs/swagger-ui-standalone-preset.js 304 - - 3.904 ms[39m
+2025-01-14 19:10:47 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-14 19:10:57 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-14 19:14:02 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-14 19:14:24 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-14 19:18:40 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:15:44 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:16:03 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:17:14 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:17:25 [35mhttp[39m: [35mGET /api-docs/ 304 - - 4.700 ms[39m
+2025-01-15 11:17:25 [35mhttp[39m: [35mGET /api-docs/swagger-ui.css 304 - - 1.798 ms[39m
+2025-01-15 11:17:25 [35mhttp[39m: [35mGET /api-docs/swagger-ui-bundle.js 304 - - 0.840 ms[39m
+2025-01-15 11:17:25 [35mhttp[39m: [35mGET /api-docs/swagger-ui-init.js 200 4588 - 0.718 ms[39m
+2025-01-15 11:17:25 [35mhttp[39m: [35mGET /api-docs/swagger-ui-standalone-preset.js 304 - - 5.215 ms[39m
+2025-01-15 11:17:25 [35mhttp[39m: [35mGET /api-docs/favicon-32x32.png 304 - - 0.851 ms[39m
+2025-01-15 11:17:43 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:17:45 [35mhttp[39m: [35mGET /api-docs/ 304 - - 6.619 ms[39m
+2025-01-15 11:17:45 [35mhttp[39m: [35mGET /api-docs/swagger-ui.css 304 - - 1.961 ms[39m
+2025-01-15 11:17:45 [35mhttp[39m: [35mGET /api-docs/swagger-ui-bundle.js 304 - - 0.728 ms[39m
+2025-01-15 11:17:45 [35mhttp[39m: [35mGET /api-docs/swagger-ui-init.js 200 3744 - 0.382 ms[39m
+2025-01-15 11:17:45 [35mhttp[39m: [35mGET /api-docs/swagger-ui-standalone-preset.js 304 - - 3.365 ms[39m
+2025-01-15 11:17:45 [35mhttp[39m: [35mGET /api-docs/favicon-32x32.png 304 - - 0.555 ms[39m
+2025-01-15 11:18:37 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:18:45 [35mhttp[39m: [35mGET /api-docs/ 304 - - 10.013 ms[39m
+2025-01-15 11:18:46 [35mhttp[39m: [35mGET /api-docs/swagger-ui.css 304 - - 1.560 ms[39m
+2025-01-15 11:18:46 [35mhttp[39m: [35mGET /api-docs/swagger-ui-bundle.js 304 - - 0.650 ms[39m
+2025-01-15 11:18:46 [35mhttp[39m: [35mGET /api-docs/swagger-ui-standalone-preset.js 304 - - 0.657 ms[39m
+2025-01-15 11:18:46 [35mhttp[39m: [35mGET /api-docs/swagger-ui-init.js 304 - - 0.298 ms[39m
+2025-01-15 11:18:47 [35mhttp[39m: [35mGET /api-docs/favicon-32x32.png 304 - - 0.828 ms[39m
+2025-01-15 11:19:12 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:19:55 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:20:06 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:20:48 [35mhttp[39m: [35mPOST /api/auth/signup 400 71 - 25.245 ms[39m
+2025-01-15 11:21:42 [35mhttp[39m: [35mPOST /api/auth/login 404 154 - 3.996 ms[39m
+2025-01-15 11:22:30 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:22:37 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 11:22:37 [32minfo[39m: [32muser already exist with provided email id[39m
+2025-01-15 11:27:57 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:34:31 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:35:59 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:38:16 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:39:26 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:39:41 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 11:54:11 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:05:09 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:05:28 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:32:17 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:32:17 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:32:17 [31merror[39m: [31mLogin error : data and hash arguments required[39m
+2025-01-15 12:33:26 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:33:29 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:33:29 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:33:29 [31merror[39m: [31mLogin error : data and hash arguments required[39m
+2025-01-15 12:34:19 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:34:22 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:34:22 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:35:13 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:35:14 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:35:14 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:37:26 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:38:28 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:38:31 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:38:31 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:38:42 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:38:46 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:38:46 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:38:56 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:38:58 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:38:58 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:40:06 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:40:17 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:40:17 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:40:42 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:40:45 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:40:45 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 12:41:12 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 12:41:14 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 12:41:14 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 13:01:56 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:02:18 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:02:41 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:02:45 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:03:18 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:05:17 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:05:21 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:05:28 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:06:04 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:06:27 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 13:06:27 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 13:06:27 [31merror[39m: [31mgenerateRefreshToken is not a function[39m
+2025-01-15 13:06:27 [31merror[39m: [31mLogin error : error while sign in [31mgenerateRefreshToken is not a function[31m[39m
+2025-01-15 13:06:48 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:06:51 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 13:06:51 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 13:06:51 [31merror[39m: [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[39m
+2025-01-15 13:06:51 [31merror[39m: [31mLogin error : error while sign in [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[31m[39m
+2025-01-15 13:07:39 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:07:40 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 13:07:40 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 13:07:40 [31merror[39m: [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[39m
+2025-01-15 13:07:40 [31merror[39m: [31mLogin error : error while sign in [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[31m[39m
+2025-01-15 13:08:37 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:08:40 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 13:08:40 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 13:09:00 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:09:03 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 13:09:03 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 13:09:24 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:11:06 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:11:46 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:11:49 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 13:11:49 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 13:11:49 [35mhttp[39m: [35mPOST /api/auth/signin 200 49 - 86.495 ms[39m
+2025-01-15 13:13:23 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 13:13:26 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 13:13:26 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 13:13:26 [35mhttp[39m: [35mPOST /api/auth/signin 200 407 - 91.552 ms[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:53:03 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 26.580 ms[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:53:03 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 5.138 ms[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:53:03 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 3.729 ms[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:53:03 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 5.673 ms[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:53:03 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:53:03 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 2.447 ms[39m
+2025-01-15 14:53:03 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.890 ms[39m
+2025-01-15 14:53:03 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.392 ms[39m
+2025-01-15 14:53:03 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.404 ms[39m
+2025-01-15 14:55:45 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 14:55:56 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:55:56 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:55:56 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 23.231 ms[39m
+2025-01-15 14:56:02 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:56:02 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:56:02 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 11.756 ms[39m
+2025-01-15 14:56:36 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 14:56:47 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:56:47 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:56:47 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 16.080 ms[39m
+2025-01-15 14:58:06 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 14:58:08 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:58:08 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:58:08 [32minfo[39m: [32mUser registered successfully: john.doe12e@example.com[39m
+2025-01-15 14:58:08 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 99.707 ms[39m
+2025-01-15 14:58:35 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:58:35 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 14:58:35 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 13.914 ms[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mUser registered successfully: john.doe42@example.com[39m
+2025-01-15 14:58:51 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 79.012 ms[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 14:58:51 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 5.727 ms[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 14:58:51 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 6.112 ms[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 14:58:51 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 6.938 ms[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 14:58:51 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 14:58:51 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 9.656 ms[39m
+2025-01-15 14:58:51 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.752 ms[39m
+2025-01-15 14:58:51 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.524 ms[39m
+2025-01-15 14:58:51 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.437 ms[39m
+2025-01-15 15:06:56 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.495 ms[39m
+2025-01-15 15:06:56 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.680 ms[39m
+2025-01-15 15:06:56 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.291 ms[39m
+2025-01-15 15:06:56 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 1.435 ms[39m
+2025-01-15 15:06:56 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.731 ms[39m
+2025-01-15 15:06:56 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.434 ms[39m
+2025-01-15 15:06:56 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.608 ms[39m
+2025-01-15 15:06:56 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.480 ms[39m
+2025-01-15 15:08:10 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.278 ms[39m
+2025-01-15 15:08:10 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.286 ms[39m
+2025-01-15 15:08:10 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.523 ms[39m
+2025-01-15 15:08:10 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.335 ms[39m
+2025-01-15 15:08:10 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.464 ms[39m
+2025-01-15 15:08:10 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.573 ms[39m
+2025-01-15 15:08:10 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.543 ms[39m
+2025-01-15 15:08:54 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 15:13:16 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mUser registered successfully: john.doe80@example.com[39m
+2025-01-15 15:13:23 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 97.361 ms[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:13:23 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 8.793 ms[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:13:23 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 4.892 ms[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:13:23 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 4.707 ms[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:13:23 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:13:23 [35mhttp[39m: [35mPOST /api/auth/signup 400 54 - 4.064 ms[39m
+2025-01-15 15:13:23 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.567 ms[39m
+2025-01-15 15:13:23 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.331 ms[39m
+2025-01-15 15:15:12 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:15:12 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 15:15:12 [32minfo[39m: [32mUser registered successfully: john.doe12we@example.com[39m
+2025-01-15 15:15:12 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 84.988 ms[39m
+2025-01-15 15:15:16 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:15:16 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 15:15:17 [32minfo[39m: [32mUser registered successfully: john.doe12wwe@example.com[39m
+2025-01-15 15:15:17 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 171.972 ms[39m
+2025-01-15 15:15:21 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:15:21 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 15:15:21 [32minfo[39m: [32mUser registered successfully: john.doe12wwwe@example.com[39m
+2025-01-15 15:15:21 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 141.173 ms[39m
+2025-01-15 15:15:25 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:15:25 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 15:15:25 [32minfo[39m: [32mUser registered successfully: john.doe12wwwew@example.com[39m
+2025-01-15 15:15:25 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 97.087 ms[39m
+2025-01-15 15:15:28 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:15:28 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 15:15:29 [32minfo[39m: [32mUser registered successfully: john.doe12wwwwew@example.com[39m
+2025-01-15 15:15:29 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 133.212 ms[39m
+2025-01-15 15:15:32 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.646 ms[39m
+2025-01-15 15:18:34 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 15:18:57 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 15:19:12 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 15:19:28 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 15:21:10 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:21:10 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 15:21:11 [32minfo[39m: [32mUser registered successfully: john.doe@example.com[39m
+2025-01-15 15:21:11 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 159.491 ms[39m
+2025-01-15 15:21:27 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 15:21:27 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:21:28 [35mhttp[39m: [35mPOST /api/auth/signin 200 405 - 117.839 ms[39m
+2025-01-15 15:21:48 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 15:21:48 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:21:48 [35mhttp[39m: [35mPOST /api/auth/signin 200 405 - 100.011 ms[39m
+2025-01-15 15:21:49 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 15:21:49 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:21:50 [35mhttp[39m: [35mPOST /api/auth/signin 200 405 - 137.561 ms[39m
+2025-01-15 15:21:51 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 15:21:51 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:21:51 [35mhttp[39m: [35mPOST /api/auth/signin 200 405 - 99.292 ms[39m
+2025-01-15 15:21:52 [35mhttp[39m: [35mPOST /api/auth/signin 429 73 - 1.409 ms[39m
+2025-01-15 15:22:22 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.722 ms[39m
+2025-01-15 15:25:46 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.747 ms[39m
+2025-01-15 15:27:23 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 0.819 ms[39m
+2025-01-15 15:27:41 [35mhttp[39m: [35mPOST /api/auth/signup 429 73 - 1.420 ms[39m
+2025-01-15 15:28:41 [32minfo[39m: [32mServer is running at http://localhost:8080[39m
+2025-01-15 15:28:46 [32minfo[39m: [32mAttempting user registration[39m
+2025-01-15 15:28:46 [32minfo[39m: [32mNo user found with the provided email ID[39m
+2025-01-15 15:28:46 [32minfo[39m: [32mUser registered successfully: john.doe@example.com[39m
+2025-01-15 15:28:46 [35mhttp[39m: [35mPOST /api/auth/signup 201 152 - 89.845 ms[39m
+2025-01-15 15:28:54 [32minfo[39m: [32mAttempting user login[39m
+2025-01-15 15:28:54 [32minfo[39m: [32mUser exists with the provided email ID[39m
+2025-01-15 15:28:54 [35mhttp[39m: [35mPOST /api/auth/signin 200 405 - 96.323 ms[39m

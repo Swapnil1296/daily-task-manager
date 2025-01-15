@@ -4,7 +4,7 @@ const router = express.Router();
 const authController = require('../controllers/user.controller');
 const { authLimiter } = require('../middleware/rate-limiter');
 const { inputSanitizer } = require('../middleware/sanitizer');
-const { signupValidationRules, validate } = require('../middleware/validator');
+const { signupValidationRules, validate, signInValidationRule } = require('../middleware/validator');
 
 /**
  * @swagger
@@ -28,6 +28,9 @@ const { signupValidationRules, validate } = require('../middleware/validator');
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
+
+
+
 router.post('/signup',
     authLimiter,
     inputSanitizer,
@@ -35,6 +38,7 @@ router.post('/signup',
     validate,
     authController.signUpUser
 );
+router.post('/signin', authLimiter, inputSanitizer, validate, signInValidationRule, authController.singInUser)
 
 router.get('/verify-email', authController.verifyEmail);
 
