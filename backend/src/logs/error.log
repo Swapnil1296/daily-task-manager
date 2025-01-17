@@ -1,0 +1,11 @@
+2025-01-14 15:57:28 [31merror[39m: [31mRegistration error: userModel.findByEmail is not a function[39m
+2025-01-14 17:04:45 [31merror[39m: [31mRegistration error: Failed to check user existence[39m
+2025-01-14 17:05:35 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:05:38 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:06:13 [31merror[39m: [31mRegistration error: Failed to check user existence[39m
+2025-01-14 17:08:47 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:09:21 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:10:56 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:11:39 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:13:39 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 18:05:33 [31merror[39m: [31mRegistration error: user not created[39m
