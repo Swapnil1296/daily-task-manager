@@ -1,22 +1,37 @@
+const express = require("express");
+const taskController = require("../controllers/task.controller");
+const { taskValidationRules, validate } = require("../middleware/validator");
+const { inputSanitizer } = require("../middleware/sanitizer");
+const verifyToken = require("../middleware/verif-token");
+const { authLimiter } = require("../middleware/rate-limiter");
 
+const router = express.Router();
 
-const express = require('express');
-const taskController = require('../controllers/task.controller');
-const { taskValidationRules, validate } = require('../middleware/validator');
-const { inputSanitizer } = require('../middleware/sanitizer');
-const verifyToken = require('../middleware/verif-token');
-const { authLimiter } = require('../middleware/rate-limiter');
+router.post(
+  "/add-task",
+  authLimiter,
+  verifyToken,
+  inputSanitizer,
+  taskValidationRules,
+  validate,
+  taskController.addTask
+);
 
+router.post(
+  "/update-task/:taskId",
+  authLimiter,
+  verifyToken,
+  inputSanitizer,
+  taskValidationRules,
+  validate,
+  taskController.updateTask
+);
 
-const router = express.Router()
+router.get(
+  "/get-all-task",
+  authLimiter,
+  verifyToken,
+  taskController.getTaskByUser
+);
 
-
-router.post('/add-task', authLimiter, verifyToken, inputSanitizer, taskValidationRules, validate, taskController.addTask);
-
-router.post('/update-task/:taskId', authLimiter, verifyToken, inputSanitizer, taskValidationRules, validate, taskController.updateTask);
-
-router.get('/get-all-task', verifyToken, taskController.getTaskByUser);
-
-
-
-module.exports = router
+module.exports = router;
