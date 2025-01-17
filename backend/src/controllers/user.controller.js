@@ -15,7 +15,7 @@ const authController = {
 
             // Check for existing user
             const existingUser = await userModel.findByEmail(email);
-            console.log("existingUser==>", existingUser)
+
             if (existingUser.status === 200) {
                 return res.status(400).json({
                     success: false,
@@ -89,7 +89,9 @@ const authController = {
                     });
                     const userInfo = { email, password, token, userId: findUser?.user?.id };
                     const loginUser = await userModel.singInUser(userInfo);
-                    refreshToken = loginUser?.data?.refreshToken
+                    const refreshToken = loginUser?.data?.refreshToken;
+                    const userId = findUser?.user?.id;
+
                     if (loginUser.status === 200) {
                         res.cookie("task-tracker", token, {
                             httpOnly: false,
@@ -100,6 +102,7 @@ const authController = {
                             data: {
                                 accesToken: token,
                                 refreshToken,
+
                             }
 
                         })
@@ -119,7 +122,11 @@ const authController = {
 
 
         } catch (error) {
-            logger.error(`Login error : ${error.message}`)
+            logger.error(`Login error : ${error.message}`);
+            return res.status(500).json({
+                success: false,
+                message: 'Internal server error'
+            });
         }
     },
     verifyEmail: async (req, res) => {

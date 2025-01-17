@@ -6,6 +6,7 @@ const swaggerUi = require('swagger-ui-express');
 
 const db = require("./src/config/database");
 const getUserRoutes = require("./src/routes/user.routes.js");
+const getTaskRoutes = require('./src/routes/task.routes')
 const { logger } = require("./src/config/logger");
 const httpLogger = require("./src/middleware/http-logger.middleware");
 const specs = require("./src/config/swagger");
@@ -24,6 +25,7 @@ app.use(httpLogger);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 // API Routes
 app.use('/api/auth', getUserRoutes);
+app.use('/api/task', getTaskRoutes)
 
 // Health Check Route (to verify DB connection)
 app.get("/", async (req, res) => {
@@ -42,17 +44,7 @@ app.use((err, req, res, next) => {
     logger.error(`Error: ${err.message}`);
     res.status(err.status || 500).json({ error: err.message || "Server Error" });
 });
-// Custom middleware to log rate limit message
-app.use((req, res, next) => {
-    // Listen for rate-limited requests and log to console
-    res.on('finish', () => {
-        if (res.statusCode === 429) {
-            console.log('Rate limit exceeded: Too many requests');
-            console.log('Message:', res.statusMessage);
-        }
-    });
-    next();
-});
+
 
 // Unhandled Promise Rejection Handling
 process.on("unhandledRejection", (reason, promise) => {
