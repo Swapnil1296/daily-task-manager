@@ -1,6 +1,8 @@
 // src/controllers/auth.controller.js
-const { logger } = require("../config/logger");
 const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken')
+
+const { logger } = require("../config/logger");
 const userModel = require("../models/user.model");
 const emailService = require("../services/email-service.js");
 
@@ -13,7 +15,8 @@ const authController = {
 
             // Check for existing user
             const existingUser = await userModel.findByEmail(email);
-            if (existingUser) {
+
+            if (existingUser.status === 200) {
                 return res.status(400).json({
                     success: false,
                     message: 'Email already registered'
@@ -68,7 +71,64 @@ const authController = {
             });
         }
     },
+    singInUser: async (req, res) => {
+        logger.info('Attempting user login');
+        try {
+            const { email, password } = req.body;
+            if (!email) throw new Error("email is required");
+            if (!password) throw new Error("password is required");
 
+            const findUser = await userModel.findByEmail(email)
+            if (findUser) {
+
+                const matchPassword = await bcrypt.compare(typeof password === "number" ? String(password) : password, findUser?.user?.password)
+
+                if (matchPassword) {
+                    const token = jwt.sign({ userId: findUser.user?.id, email: email }, process.env.JWT_SECRET, {
+                        expiresIn: '1h'
+                    });
+                    const userInfo = { email, password, token, userId: findUser?.user?.id };
+                    const loginUser = await userModel.singInUser(userInfo);
+                    const refreshToken = loginUser?.data?.refreshToken;
+                    const userId = findUser?.user?.id;
+
+                    if (loginUser.status === 200) {
+                        res.cookie("task-tracker", token, {
+                            httpOnly: false,
+                        });
+                        return res.status(200).json({
+                            status: 200,
+                            message: "signed-in successfully",
+                            data: {
+                                accesToken: token,
+                                refreshToken,
+
+                            }
+
+                        })
+                    }
+                    logger.info("signed in successfully")
+
+                } else {
+                    return res.status(400).json({
+                        status: 400,
+                        message: "invalid credentials",
+                        error: "login failed"
+                    })
+                }
+
+
+            }
+
+
+        } catch (error) {
+            logger.error(`Login error : ${error.message}`);
+            return res.status(500).json({
+                success: false,
+                message: 'Internal server error'
+            });
+        }
+    },
     verifyEmail: async (req, res) => {
         try {
             const { token } = req.query;

@@ -2,6 +2,9 @@ import { ErrorMessage, Field, Formik, Form } from "formik";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { validationSchemas } from "../utils/helper";
+import axios, { AxiosError } from "../services/api/AxiosInterceptor";
+import { showErrorAlert } from "../utils/alertUtils";
+import { useNavigate } from "react-router-dom";
 
 interface SignUpProps {
   fullname: string;
@@ -58,6 +61,38 @@ const SignUp = () => {
       placeholder: "Confirm your password"
     }
   ];
+  const navigate = useNavigate()
+
+  const handleSubmit = async (values: SignUpProps) => {
+    try {
+      const { fullname, email, password } = values;
+      const payload = {
+        name: fullname,
+        email,
+        password,
+      };
+
+      const res = await axios.post('/auth/signup', payload);
+
+      if (res?.data?.success) {
+        navigate('/');
+      }
+    } catch (err) {
+      const error = err as AxiosError;
+
+      if (error.response && error.response.data) {
+        const { success, message } = error.response.data as { success: boolean; message: string };
+
+        if (!success) {
+          showErrorAlert("Error!", message, "Try again");
+        }
+      } else {
+        console.error("Unexpected error:", error);
+        showErrorAlert("Error!", "An unexpected error occurred. Please try again.", "Try again");
+      }
+    }
+  };
+
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
@@ -78,7 +113,7 @@ const SignUp = () => {
           validateOnChange={true}
           enableReinitialize
           onSubmit={(values, { setSubmitting }) => {
-            console.log(values);
+            handleSubmit(values)
             setSubmitting(false);
           }}
         >
