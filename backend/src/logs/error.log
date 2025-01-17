@@ -1,0 +1,75 @@
+2025-01-14 15:57:28 [31merror[39m: [31mRegistration error: userModel.findByEmail is not a function[39m
+2025-01-14 17:04:45 [31merror[39m: [31mRegistration error: Failed to check user existence[39m
+2025-01-14 17:05:35 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:05:38 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:06:13 [31merror[39m: [31mRegistration error: Failed to check user existence[39m
+2025-01-14 17:08:47 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:09:21 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:10:56 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:11:39 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 17:13:39 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-14 18:05:33 [31merror[39m: [31mRegistration error: user not created[39m
+2025-01-15 12:32:17 [31merror[39m: [31mLogin error : data and hash arguments required[39m
+2025-01-15 12:33:29 [31merror[39m: [31mLogin error : data and hash arguments required[39m
+2025-01-15 13:06:27 [31merror[39m: [31mgenerateRefreshToken is not a function[39m
+2025-01-15 13:06:27 [31merror[39m: [31mLogin error : error while sign in [31mgenerateRefreshToken is not a function[31m[39m
+2025-01-15 13:06:51 [31merror[39m: [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[39m
+2025-01-15 13:06:51 [31merror[39m: [31mLogin error : error while sign in [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[31m[39m
+2025-01-15 13:07:40 [31merror[39m: [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[39m
+2025-01-15 13:07:40 [31merror[39m: [31mLogin error : error while sign in [31mnull value in column "user_id" of relation "refresh_tokens" violates not-null constraint[31m[39m
+2025-01-16 13:22:27 [31merror[39m: [31muser id is required[39m
+2025-01-16 13:22:27 [31merror[39m: [31muser is not defined[39m
+2025-01-16 13:22:59 [31merror[39m: [31muser is not defined[39m
+2025-01-16 13:47:52 [31merror[39m: [31mlogger is not defined[39m
+2025-01-16 13:48:09 [31merror[39m: [31mError adding task: userId is not defined[39m
+2025-01-16 13:51:24 [31merror[39m: [31mError adding task: column "title" does not exist[39m
+2025-01-16 13:52:58 [31merror[39m: [31mError adding task: column "title" does not exist[39m
+2025-01-16 13:54:35 [31merror[39m: [31mError adding task: addtitle is not defined[39m
+2025-01-16 14:33:18 [31merror[39m: [31mError adding task: invalid input syntax for type uuid: "{"id":"bb209df1-4041-4849-998c-c57d7f1d6edc"}"[39m
+2025-01-16 14:36:00 [31merror[39m: [31mError adding task: invalid input syntax for type uuid: "{"id":"9d18df6f-f442-42f4-ae79-3b7e5b9a62fe"}"[39m
+2025-01-16 15:51:15 [31merror[39m: [31mError adding : syntax error at or near "RETUNRING"[39m
+2025-01-16 15:53:49 [31merror[39m: [31mError adding : syntax error at or near "RETUNRING"[39m
+2025-01-16 16:05:43 [31merror[39m: [31mError adding : duplicate key value violates unique constraint "tags_name_key"[39m
+2025-01-16 16:08:05 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:08:05 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:09:41 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:09:41 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:11:56 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:11:56 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:12:48 [31merror[39m: [31mError adding : duplicate key value violates unique constraint "tags_name_key"[39m
+2025-01-16 16:12:59 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:12:59 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:13:34 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:13:34 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: error: column "id" does not exist[39m
+2025-01-16 16:30:14 [31merror[39m: [31mError adding task: column "id" does not exist[39m
+2025-01-16 16:32:21 [31merror[39m: [31mError adding task: Cannot read properties of undefined (reading 'id')[39m
+2025-01-16 16:36:16 [31merror[39m: [31mError adding task: duplicate key value violates unique constraint "tags_name_key"[39m
+2025-01-16 17:09:49 [31merror[39m: [31mlogger.success is not a function[39m
+2025-01-16 17:10:32 [31merror[39m: [31mError adding task: duplicate key value violates unique constraint "tags_name_key"[39m
+2025-01-16 17:59:10 [31merror[39m: [31mtask is not defined[39m
+2025-01-16 18:28:49 [31merror[39m: [31merror fetching task : Cannot read properties of undefined (reading 'status')[39m
+2025-01-16 18:28:53 [31merror[39m: [31merror fetching task : Cannot read properties of undefined (reading 'status')[39m
+2025-01-16 18:34:30 [31merror[39m: [31mError fetching tasks: No tasks found for the user.[39m
+2025-01-16 18:38:15 [31merror[39m: [31mError adding task: column "id" does not exist[39m
+2025-01-16 18:38:15 [31merror[39m: [31mUnexpected error while adding task[39m
+2025-01-16 18:40:33 [31merror[39m: [31mError adding task: Cannot read properties of undefined (reading 'id')[39m
+2025-01-16 18:40:33 [31merror[39m: [31mUnexpected error while adding task[39m
+2025-01-16 18:43:52 [31merror[39m: [31mError fetching tasks: No tasks found for the user.[39m
+2025-01-16 18:44:07 [31merror[39m: [31mError: Expected double-quoted property name in JSON at position 311[39m
+2025-01-17 11:16:51 [31merror[39m: [31mUnhandled Rejection at: [object Promise], reason: ReferenceError: log is not defined[39m
+2025-01-17 11:19:47 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 11:20:10 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 11:21:04 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 11:21:28 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 11:23:48 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 11:25:22 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 11:30:56 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 11:32:05 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 11:32:19 [31merror[39m: [31mError fetching tasks: Internal server error[39m
+2025-01-17 12:26:01 [31merror[39m: [31mError adding task: column "id" does not exist[39m
+2025-01-17 12:26:01 [31merror[39m: [31mUnexpected error while adding task[39m
+2025-01-17 12:27:15 [31merror[39m: [31mError adding task: column "id" does not exist[39m
+2025-01-17 12:27:15 [31merror[39m: [31mUnexpected error while adding task[39m
+2025-01-17 12:28:38 [31merror[39m: [31mError adding task: column "id" does not exist[39m
+2025-01-17 12:28:38 [31merror[39m: [31mUnexpected error while adding task[39m
+2025-01-17 12:44:47 [31merror[39m: [31mError: Expected double-quoted property name in JSON at position 281[39m
