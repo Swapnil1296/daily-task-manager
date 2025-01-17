@@ -2,7 +2,9 @@ import { Field, Formik, Form, ErrorMessage } from "formik";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { validationSchemas } from "../utils/helper";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axiosInstance from "../services/api/AxiosInterceptor";
+import { showErrorAlert } from "../utils/alertUtils";
 
 
 interface LoginProps {
@@ -46,7 +48,39 @@ const Login = () => {
       placeholder: "Enter your password"
     }
   ];
+  const navigate = useNavigate()
+  const handleSubmit = async (values: LoginProps) => {
+    try {
+      const { email, password } = values;
+      const payload = {
 
+        email,
+        password,
+      };
+
+      const res = await axiosInstance.post('/auth/signin', payload);
+
+      if (res?.data?.success === 200) {
+        const accessToken = res?.data?.data?.accesToken;
+        sessionStorage.setItem('accessToken', accessToken);
+        navigate('/');
+      }
+
+    } catch (err) {
+      const error = err as AxiosError;
+
+      if (error.response && error.response.data) {
+        const { success, message } = error.response.data as { success: boolean; message: string };
+
+        if (!success) {
+          showErrorAlert("Error!", message, "Try again");
+        }
+      } else {
+        console.error("Unexpected error:", error);
+        showErrorAlert("Error!", "An unexpected error occurred. Please try again.", "Try again");
+      }
+    }
+  };
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-300 via-blue-300 to-indigo-300">
@@ -62,7 +96,7 @@ const Login = () => {
           validationSchema={validationSchemas?.validationSchemaLoginForm}
           enableReinitialize
           onSubmit={(values) => {
-            console.log(values);
+            handleSubmit(values);
           }
           }>
           {({ isSubmitting, isValid, dirty }) => (
@@ -71,15 +105,15 @@ const Login = () => {
               (
                 <div key={field.id}>
                   <label className="block text-sm font-medium text-gray-600">{field?.label}</label>
-                <Field
+                  <Field
                     id={field?.id}
                     name={field?.name}
                     type={field?.type}
                     placeholder={field?.placeholder}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-200 focus:border-green-400"
-                />
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-200 focus:border-green-400"
+                  />
                   <ErrorMessage name={field?.name} component="div" className="text-red-500" />
-              </div>
+                </div>
               ))}
 
 

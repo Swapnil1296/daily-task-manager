@@ -1,4 +1,4 @@
- import TakeNotes from "./pages/TakeNotes";
+import TakeNotes from "./pages/TakeNotes";
 import Navbar from "./components/layouts/Navigation/NavBar";
 import AddTask from "./pages/AddTask";
 import Home from "./pages/Home";
@@ -9,8 +9,8 @@ import BuyMeACoffee from "./pages/BuyMeACoffee";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
   return (
-   
-     <Router basename="/">
+
+    <Router basename="/">
       {/* Your app components go here */}
       <Navbar />
 
@@ -23,10 +23,11 @@ const App = () => {
         <Route path="/log-in" element={<Login />} />
         <Route path="/buy-me-coffee" element={<BuyMeACoffee />} />
         <Route path="/" element={<Home />} />
+
       </Routes>
-   </Router> 
-       
-   
+    </Router>
+
+
   )
 }
 export default App;
