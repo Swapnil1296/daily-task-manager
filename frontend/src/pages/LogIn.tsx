@@ -1,4 +1,4 @@
-import { Field, Formik, Form, ErrorMessage } from "formik";
+import { Field, Formik, Form, ErrorMessage, } from "formik";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { validationSchemas } from "../utils/helper";
@@ -49,23 +49,21 @@ const Login = () => {
     }
   ];
   const navigate = useNavigate()
-  const handleSubmit = async (values: LoginProps) => {
+
+
+  const handleSubmit = async (values: LoginProps, { setFieldValue }: any) => {
     try {
       const { email, password } = values;
-      const payload = {
-
-        email,
-        password,
-      };
+      const payload = { email, password };
 
       const res = await axiosInstance.post('/auth/signin', payload);
 
-      if (res?.data?.success === 200) {
-        const accessToken = res?.data?.data?.accesToken;
-        sessionStorage.setItem('accessToken', accessToken);
-        navigate('/');
-      }
+      if (res?.data?.status === 200) {
+        const token = res?.data?.data;
 
+        sessionStorage.setItem('accessToken', token?.accesToken);
+        navigate('/home');
+      }
     } catch (err) {
       const error = err as AxiosError;
 
@@ -73,14 +71,18 @@ const Login = () => {
         const { success, message } = error.response.data as { success: boolean; message: string };
 
         if (!success) {
-          showErrorAlert("Error!", message, "Try again");
+          // Reset the specific fields
+          setFieldValue('email', '');
+          setFieldValue('password', '');
+          showErrorAlert('Error!', message, 'Try again');
         }
       } else {
-        console.error("Unexpected error:", error);
-        showErrorAlert("Error!", "An unexpected error occurred. Please try again.", "Try again");
+        console.error('Unexpected error:', error);
+        showErrorAlert('Error!', 'An unexpected error occurred. Please try again.', 'Try again');
       }
     }
   };
+
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-300 via-blue-300 to-indigo-300">
@@ -95,8 +97,9 @@ const Login = () => {
           initialValues={initialState}
           validationSchema={validationSchemas?.validationSchemaLoginForm}
           enableReinitialize
-          onSubmit={(values) => {
-            handleSubmit(values);
+          onSubmit={(values, actions) => {
+            handleSubmit(values, actions);
+            actions.setSubmitting(false)
           }
           }>
           {({ isSubmitting, isValid, dirty }) => (
